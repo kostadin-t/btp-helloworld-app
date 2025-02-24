@@ -1,0 +1,27 @@
+{
+  "xsappname": "sapbtphelloworldui5",
+  "tenant-mode": "dedicated",
+  "description": "Security profile of called application",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Display",
+      "description": "Allows display access to the application"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "DisplayRole",
+      "description": "Role for displaying the application",
+      "scope-references": [ "$XSAPPNAME.Display" ]
+    }
+  ],
+  "role-collections": [
+    {
+      "name": "DisplayCollection",
+      "description": "Collection of roles for displaying the application", 
+      "role-template-references": [ 
+        "$XSAPPNAME.DisplayRole"
+      ]
+    }
+  ]
+}
